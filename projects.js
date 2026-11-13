@@ -26,6 +26,11 @@ const projects = [
   },
   {
     "id": "workflow",
+    "preview": "assets/workflow-task-board.png",
+    "previewAlt": "Workflow desktop app showing To do, In progress, and Done columns with task cards and subtasks.",
+    "previewCaption": "Workflow task board",
+    "previewWidth": 1426,
+    "previewHeight": 913,
     "repository": "https://github.com/RiederH/Project-Workflow",
     "capstone": true,
     "title": "Workflow",
