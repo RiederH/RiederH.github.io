@@ -1,10 +1,120 @@
-// Add future projects here. Category may be Algorithms, Creative computing, or Hobby.
+// Portfolio descriptions. capstone entries appear on the Capstone projects page.
 const projects = [
-{id:'atlas',repository:'https://github.com/RiederH/Project-Atlas',capstone:true,title:'Project Atlas + Widgets',category:'Hobby',date:'OCT 2026',course:'PERSONAL PROJECT',tags:['Python','SQLite','Windows desktop','Knowledge graph'],description:'A fork of Obsidian, extended with companion Widgets and a local workspace for connected knowledge.',detail:'Atlas is my fork of Obsidian, extended with companion Widgets and a local knowledge workflow. It brings a searchable note library, Markdown/LaTeX editing, tags, wiki links, backlinks, and an interactive knowledge graph into a Windows desktop app. Its import studio turns selected Notability PDFs into reviewable Markdown and LaTeX drafts, with links back to the original source.',approach:'Keep the vault local with SQLite and Markdown exports. Connect notes through explicit links, explore those connections in a pannable, zoomable graph, and review imported drafts against their source PDFs.',color:'#cfdbca',art:'atlas',note:'Personal project · Based on the Atlas and Quick Notes project documentation. The artwork is a concept illustration, not a program screenshot.',components:[{title:'Atlas workspace',text:'Searchable notes, folders, templates, attachments, configurable settings, and a graph that connects the library.'},{title:'Companion Widgets · Quick Notes',text:'A separate Windows tray widget opens with Ctrl+Shift+Y. Capture an idea, then save it straight into the Atlas vault with Ctrl+Enter. Closing the bubble preserves the local draft.'},{title:'PDF import & review',text:'Import source PDFs, compare generated drafts with the originals, and export a Markdown corpus with provenance and review status.'}]},
-{id:'workflow',repository:'https://github.com/RiederH/Project-Workflow',capstone:true,title:'Project Workflow',category:'Hobby',date:'OCT 2026',course:'PERSONAL PROJECT',tags:['Windows desktop','WebView2','Task boards','Local storage'],description:'Inspired by Trello and Jira, a personal task board for plans, priorities, and smaller next steps.',detail:'Inspired by Trello and Jira, Workflow is a Windows desktop task board with custom boards and columns, draggable cards, and recursively nested subtasks. Tasks include descriptions, labels, priorities, and due dates. A global shortcut reveals the app, and closing its window keeps it available in the system tray.',approach:'Build a focused board interface inside a native WebView2 desktop shell. Save boards locally in a stable Documents folder, retain previous versions, and recover damaged saves from valid backups.',color:'#cbdde8',art:'workflow',note:'Personal project · Based on the Workflow project documentation. The artwork is a concept illustration, not a program screenshot.',components:[{title:'Organize the work',text:'Create boards and custom columns, drag cards into order, and break tasks into nested subtasks with independent completion tracking.'},{title:'Find the next step',text:'Search tasks and nested subtasks, or use N to create a task and / to focus search. Ctrl+Shift+Alt+T reveals the running desktop app.'},{title:'Keep it local',text:'No account is required. Local saves include a preceding backup, a history of changed versions, and portable JSON export and restore.'}]},
-{id:'puzzle',title:'Sliding Puzzle Solver',category:'Algorithms',date:'APR 2026',course:'CS 225',tags:['C++','BFS','A* search'],description:'Finding a way through the 15-puzzle, one state at a time.',detail:'A C++ implementation of the 4 × 4 sliding puzzle. Puzzle states support neighbor generation, comparisons, and Manhattan-distance calculations. Breadth-first and A* search explore the state space and reconstruct a path to the desired arrangement.',approach:'Represent each board as a fixed-size array, generate legal tile moves, and track predecessor states to recover the solution. The Manhattan-distance heuristic guides A* toward the goal.',color:'#e7b78c',art:'puzzle'},
-{id:'mosaic',title:'KD-Trees & Photo Mosaics',category:'Creative computing',date:'MAR 2026',course:'CS 225',tags:['C++','KD-trees','Nearest neighbor'],description:'Turning color matching into a canvas made of smaller images.',detail:'A photo-mosaic project that represents tile colors as points in three-dimensional LUV color space. A KD-tree finds the nearest matching tile for each region of a source image.',approach:'Index average tile colors in a KD-tree, query the nearest color for each image region, and assemble the selected tiles into a mosaic canvas.',color:'#d9dfcc',art:'mosaic'},
-{id:'maze',title:'Maze Generation & Solving',category:'Algorithms',date:'APR 2026',course:'CS 225',tags:['C++','Disjoint sets','Graph traversal'],description:'From a grid of walls to a connected maze and a path through it.',detail:'A square-maze implementation backed by disjoint sets. Maze generation removes walls between separate components until the cells form one connected structure. The project also includes solving and drawing routines.',approach:'Store right and bottom walls for each cell. Randomly select candidate walls, use disjoint sets to avoid joining cells already connected, and traverse the resulting maze to find a solution.',color:'#d3ddd9',art:'maze'},
-{id:'nim',title:'Nim Reinforcement Learner',category:'Algorithms',date:'MAY 2026',course:'CS 225 · LAB',tags:['C++','Graphs','Reinforcement learning'],description:'Representing a game as a graph, then learning from the moves.',detail:'A graph-based Nim learner. Vertices encode the current player and remaining tokens, while edges represent legal moves that remove one or two tokens. Random games provide paths used to update move weights.',approach:'Build the complete game-state graph with zero-weight edges. Simulate games and adjust edge weights according to which player won, linking outcomes back to individual decisions.',color:'#ded5e6',art:'nim'},
-{id:'flood',title:'Image Traversal & Flood Fill',category:'Creative computing',date:'MAR 2026',course:'CS 225',tags:['C++','Image traversal','Animation'],description:'Exploring images pixel by pixel and bringing the process to life.',detail:'An image-processing project that combines traversal strategies with color pickers. Flood-fill operations are stored in sequence, then applied to an image while animation frames capture the transformation.',approach:'Keep traversal and color-picker pairs together, visit the selected pixels, recolor each one, and record frames at a chosen interval, including the initial and final image.',color:'#e6cba9',art:'flood'}
+  {
+    "id": "atlas",
+    "repository": "https://github.com/RiederH/Project-Atlas",
+    "capstone": true,
+    "title": "Atlas + Widgets",
+    "category": "Hobby",
+    "date": "Jan 2025–Present",
+    "course": "Knowledge workspace",
+    "tags": [
+      "Python",
+      "SQLite",
+      "Windows"
+    ],
+    "description": "A Python/SQLite Windows workspace with searchable notes, a knowledge graph, system-tray capture, and handwritten-note import into linked Markdown notes.",
+    "detail": "Atlas is my fork of Obsidian. It stores notes locally in SQLite and exports Markdown files. Companion Widgets capture notes from other apps.",
+    "features": [
+      "Searchable notes with tags, wiki links, backlinks, folders, and templates.",
+      "A system-tray Quick Notes widget, opened with Ctrl+Shift+Y, saves directly to the Atlas vault.",
+      "PDF import, review, and export retain links to source documents and their review status."
+    ]
+  },
+  {
+    "id": "workflow",
+    "repository": "https://github.com/RiederH/Project-Workflow",
+    "capstone": true,
+    "title": "Workflow",
+    "category": "Hobby",
+    "date": "Oct 2026",
+    "course": "Desktop task board",
+    "tags": [
+      "WebView2",
+      "JSON",
+      "Windows"
+    ],
+    "description": "A Windows task board inspired by Trello and Jira. Supports draggable cards, priorities, nested subtasks, search, local save history, backup recovery, and JSON export/restore.",
+    "detail": "Workflow runs in a Windows WebView2 desktop shell. Boards save locally as JSON, with previous versions retained for recovery.",
+    "features": [
+      "Custom boards and columns with draggable task cards, labels, priorities, due dates, and nested subtasks.",
+      "Search includes nested subtasks. A global shortcut opens the running app from the system tray.",
+      "Automatic backup recovery and JSON export/restore preserve the task workspace."
+    ]
+  },
+  {
+    "id": "puzzle",
+    "title": "Sliding Puzzle Solver",
+    "category": "Algorithms",
+    "date": "Apr 2026",
+    "course": "CS 225",
+    "tags": [
+      "C++",
+      "BFS",
+      "A*"
+    ],
+    "description": "A 4 × 4 sliding-puzzle solver using breadth-first search and A* with a Manhattan-distance heuristic.",
+    "detail": "Finds a sequence of legal tile moves from a starting board to a target arrangement.",
+    "approach": "Puzzle states use fixed-size arrays. Search tracks predecessor states to reconstruct the solution; A* uses Manhattan distance to prioritize states."
+  },
+  {
+    "id": "mosaic",
+    "title": "KD-Trees & Photo Mosaics",
+    "category": "Image processing",
+    "date": "Mar 2026",
+    "course": "CS 225",
+    "tags": [
+      "C++",
+      "KD-trees",
+      "Nearest neighbor"
+    ],
+    "description": "Builds photo mosaics by matching each region of a source image to an image tile using a KD-tree.",
+    "detail": "Represents average tile colors as points in three-dimensional LUV color space and searches for the nearest match.",
+    "approach": "A KD-tree indexes tile colors. Each source region queries the tree, then the selected image tiles are assembled into a mosaic canvas."
+  },
+  {
+    "id": "maze",
+    "title": "Maze Generation & Solving",
+    "category": "Algorithms",
+    "date": "Apr 2026",
+    "course": "CS 225",
+    "tags": [
+      "C++",
+      "Disjoint sets",
+      "BFS"
+    ],
+    "description": "Generates connected square mazes using disjoint sets, solves them with breadth-first search, and draws the maze and solution path.",
+    "detail": "Removes walls between separate cell groups until the maze is connected without cycles.",
+    "approach": "Disjoint sets track connected cells during generation. Breadth-first search finds paths through the maze; drawing routines render walls and the solution."
+  },
+  {
+    "id": "nim",
+    "title": "Nim Reinforcement Learner",
+    "category": "Algorithms",
+    "date": "May 2026",
+    "course": "CS 225 lab",
+    "tags": [
+      "C++",
+      "Graphs",
+      "Reinforcement learning"
+    ],
+    "description": "Models Nim as a graph and updates move weights from simulated game outcomes.",
+    "detail": "Each vertex represents a player and the number of tokens remaining. Edges represent moves that remove one or two tokens.",
+    "approach": "Random games produce paths through the graph. Winning moves receive positive weight updates, while losing moves receive negative updates."
+  },
+  {
+    "id": "flood",
+    "title": "Image Traversal & Flood Fill",
+    "category": "Image processing",
+    "date": "Mar 2026",
+    "course": "CS 225",
+    "tags": [
+      "C++",
+      "BFS / DFS",
+      "Animation"
+    ],
+    "description": "Applies image traversals and color pickers to flood-fill an image, recording animation frames as pixels are recolored.",
+    "detail": "Supports breadth-first and depth-first image traversal, with flood-fill operations applied in sequence.",
+    "approach": "Each operation pairs a traversal with a color picker. Frames are recorded at a specified pixel interval, including the initial and final image."
+  }
 ];

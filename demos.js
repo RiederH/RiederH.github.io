@@ -8,7 +8,7 @@
     const status=message=>q('.demo-status').textContent=message;
     const button=(action,label)=>`<button type="button" data-action="${action}">${label}</button>`;
     const controls=items=>`<div class="demo-controls">${items}</div>`;
-    root.innerHTML='<h3 class="demo-heading">Try it yourself</h3><p class="demo-intro"></p><div class="demo-body"></div><p class="demo-status" role="status" aria-live="polite"></p><p class="demo-disclosure">Interactive JavaScript recreation of the project concepts. This demo runs locally in your browser; it does not run or publish the original C++ coursework.</p>';
+    root.innerHTML='<h3 class="demo-heading">Interactive demo</h3><p class="demo-intro"></p><div class="demo-body"></div><p class="demo-status" role="status" aria-live="polite"></p><p class="demo-disclosure">JavaScript demo of the original C++ project.</p>';
     const body=q('.demo-body'),intro=q('.demo-intro');
     if(id==='puzzle'){
       intro.textContent='Slide a tile next to the empty space, or watch A* find a route to the solved board.';
