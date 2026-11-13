@@ -2,6 +2,9 @@
 const projects = [
   {
     "id": "atlas",
+    "preview": "assets/atlas-knowledge-graph.png",
+    "previewAlt": "Atlas knowledge graph connecting physics, mathematics, and computer science notes.",
+    "previewCaption": "Atlas knowledge graph",
     "repository": "https://github.com/RiederH/Project-Atlas",
     "capstone": true,
     "title": "Atlas + Widgets",
